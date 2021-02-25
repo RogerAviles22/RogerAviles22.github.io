@@ -1,5 +1,8 @@
+/*https://coolors.co/0c1331-111d4a-1481ba-45f0df-fbf1ef*/
 body, html {
     height: 100%;
+    background-color: #0C1331;
+    color: #FBF1EF;
 }
 
 /* The hero image */
@@ -18,17 +21,62 @@ body, html {
 
 /* Place text in the middle of the image */
 .hero-text {
-    text-align: center;
+    text-align: left;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
+    top: 48px;
+    left: 16px;
+    color: #FBF1EF;
+}
+
+.hero-avatar{
+    position: absolute;
+    top: 32px;
+    right: 16px;
+    height: 75%;
+    border-radius: 50%;
+}
+
+nav.navbar{
+    background-color: #111D4A;
+}
+
+.nav-item a{
+    color: #FBF1EF;
+    transition-duration: 0.5s;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem #FBF1EF;
+}
+
+.nav-item a:hover{
+    color: #45F0DF;
+}
+
 h1{
     font-family: 'Roboto', sans-serif;
 }
 
-p{
+p,a{
     font-family: 'Lato', sans-serif;
+}
+
+a>i{
+    font-size: 100px;
+    color: #FBF1EF;    
+    transition-duration: 0.3s;
+}
+
+a>i:hover{
+    color: #45F0DF;    
+}
+
+footer{
+    background-color: #111D4A;
 }
