@@ -32,7 +32,7 @@ body, html {
     position: absolute;
     top: 32px;
     right: 16px;
-    height: 50%;
+    height: 75%;
     border-radius: 50%;
 }
 
@@ -77,6 +77,49 @@ a>i:hover{
     color: #45F0DF;    
 }
 
+img.portafolio{
+    cursor:zoom-in;
+}
+
+/*Modals*/
+div.modal-header{
+    background-color: #111D4A;
+}
+
+div.modal-body, div.modal-footer{
+    background-color: #0C1331;
+}
+
+.modal-header i{
+    padding: .5rem .5rem;
+    margin: -.5rem -.5rem -.5rem auto;
+    font-size: 2rem;
+    transition-duration: 0.3s;
+}
+
+.modal-header i:hover{
+    color: #45F0DF;
+    cursor: pointer;
+}
+
+.modal-footer a{
+    color: #FBF1EF;
+    transition-duration: 0.3s;
+}
+
+.modal-footer a:hover{
+    color: #45F0DF;
+}
+
+.modal-footer button:hover{
+    background-color: #45F0DF;
+}
+
+p.modal-realizado{
+    font-size: 13px;
+}
+
+/*Footer*/
 footer{
     background-color: #111D4A;
 }
