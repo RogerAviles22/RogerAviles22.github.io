@@ -1,5 +1,23 @@
 "use strict"
 
+function loadFileAbilities() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "datos/habilidad.json", true);
+  xhttp.send();
+  xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+          let datos = JSON.parse(this.responseText);
+          let portafolio = document.getElementById("habilidad");
+          portafolio.innerHTML = '';
+          for (let item of datos) {
+              portafolio.innerHTML += `<img class="col-lg-2 col-md-3 col-sm-3 pb-3 ps-3 habilidad" 
+              src="images/logo/${item.img}" 
+              alt="${item.img}">`
+          }
+      }
+  };
+}
+
 function loadFile() {
     const xhttp = new XMLHttpRequest();
     xhttp.open("GET", "portafolio.json", true);
@@ -23,7 +41,7 @@ function loadFile() {
 
 function modal_project(item) {
     return `<div class="modal fade" id="${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" >${item.titulo}</h5>
@@ -52,3 +70,4 @@ function validar_repositorio(repositorio) {
 }
 
 loadFile();
+loadFileAbilities();
