@@ -23,7 +23,7 @@ body, html {
 .hero-text {
     text-align: left;
     position: absolute;
-    top: 48px;
+    top: 36px;
     left: 16px;
     color: #FBF1EF;
 }
@@ -35,6 +35,18 @@ body, html {
     height: 75%;
     border-radius: 50%;
 }
+
+/*Navbar*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sticky + .content {
+    padding-top: 60px;
+  }
 
 nav.navbar{
     background-color: #111D4A;
@@ -73,7 +85,7 @@ a>i{
     transition-duration: 0.3s;
 }
 
-a>i:hover{
+a>i:hover, article:hover{
     color: #45F0DF;    
 }
 
@@ -83,6 +95,10 @@ img.portafolio{
 
 
 /*Modals*/
+.modal{
+    color: #FBF1EF !important;
+}
+
 div.modal-header{
     background-color: #111D4A;
 }
@@ -119,7 +135,29 @@ div.modal-body, div.modal-footer{
 p.modal-realizado{
     font-size: 13px;
 }
+/*Habilidad*/
+.contenedor{    
+  position: relative;
+}
 
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 90%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor:hover .overlay {
+    opacity: 1;
+}
 /*Footer*/
 footer{
     background-color: #111D4A;

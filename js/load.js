@@ -10,9 +10,12 @@ function loadFileAbilities() {
           let portafolio = document.getElementById("habilidad");
           portafolio.innerHTML = '';
           for (let item of datos) {
-              portafolio.innerHTML += `<img class="col-lg-2 col-md-3 col-sm-3 pb-3 ps-3 habilidad" 
+              portafolio.innerHTML += `<div class="contenedor col-xxl-1 col-lg-2 col-md-3 col-sm-4 col-4 text-center">
+              <img class="img-habilidad img-fluid" 
               src="images/logo/${item.img}" 
-              alt="${item.img}">`
+              alt="${item.img}"> 
+              <div class="overlay">${item.txt}</div>
+            </div>  `
           }
       }
   };
@@ -29,7 +32,7 @@ function loadFile() {
             portafolio.innerHTML = '';
 
             for (let item of datos) {
-                portafolio.innerHTML += `<img class="col-lg-4 col-md-4 col-sm-6 pb-3 ps-3 portafolio" 
+                portafolio.innerHTML += `<img class="col-xxl-2 col-lg-4 col-md-4 col-sm-6 pb-3 ps-3 portafolio" 
                 data-bs-toggle="modal" data-bs-target="#${item.id}"
                 src="images/projects/${item.imagen}" 
                 alt="${item.imagen}">`
@@ -71,3 +74,21 @@ function validar_repositorio(repositorio) {
 
 loadFile();
 loadFileAbilities();
+
+// Activado cuando hacemos scroll
+window.onscroll = function() {sticky_function()};
+
+// Obtenemos navbar
+var navbar = document.getElementById("navbar");
+
+//  Obtener la posición de desplazamiento de la barra de navegación
+var sticky = navbar.offsetTop;
+
+// Agregue la clase adhesiva a la barra de navegación cuando llegue a su posición de desplazamiento. Quitar "pegajoso" cuando salga de la posición de desplazamiento
+function sticky_function() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
