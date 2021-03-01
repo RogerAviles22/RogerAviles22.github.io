@@ -53,8 +53,10 @@ function modal_project(item) {
         <div class="modal-body">
           <img class="img-fluid" src="images/projects/${item.imagen}" alt="${item.imagen}"> 
           <p class="modal-realizado text-center fst-italic ">${item.realizado}</p> 
-          <p class="text-start">${item.caracteristicas}</p> 
-          <p class="modal-lenguaje text-start ">Lenguajes usados: ${item.lenguajes}</p> 
+          <h5>Aporte</h5>`
+
+          +agregar_caracteristicas(item.caracteristicas)+          
+          `<p class="modal-lenguaje text-start ">Lenguajes usados: ${item.lenguajes}</p> 
         </div>
         <div class="modal-footer d-flex justify-content-between">` +
         validar_repositorio(item.repositorio) +
@@ -64,6 +66,18 @@ function modal_project(item) {
     </div>
   </div>`
 }
+
+function agregar_caracteristicas(caracteristicas){
+  const myList = document.createElement('ul');
+  for (let item of caracteristicas) {
+    const listItem = document.createElement('li');
+    listItem.textContent = item;
+    myList.appendChild(listItem);
+  }
+  myList.className+='mb-2';
+  return myList.outerHTML;
+}
+
 
 
 function validar_repositorio(repositorio) {
