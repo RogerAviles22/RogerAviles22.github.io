@@ -23,7 +23,7 @@ function loadFileAbilities() {
 
 function loadFile() {
     const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "portafolio.json", true);
+    xhttp.open("GET", "datos/portafolio.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -32,7 +32,7 @@ function loadFile() {
             portafolio.innerHTML = '';
 
             for (let item of datos) {
-                portafolio.innerHTML += `<img class="col-xxl-2 col-lg-4 col-md-4 col-sm-6 pb-3 ps-3 portafolio" 
+                portafolio.innerHTML += `<img class="col-xxl-2 col-lg-4 col-md-4 col-sm-6  portafolio" 
                 data-bs-toggle="modal" data-bs-target="#${item.id}"
                 src="images/projects/${item.imagen}" 
                 alt="${item.imagen}">`
@@ -56,7 +56,7 @@ function modal_project(item) {
           <h5>Aporte</h5>`
 
           +agregar_caracteristicas(item.caracteristicas)+          
-          `<p class="modal-lenguaje text-start ">Lenguajes usados: ${item.lenguajes}</p> 
+          `<p class="modal-lenguaje text-start ">Lenguajes y herramientas usados: ${item.lenguajes}</p> 
         </div>
         <div class="modal-footer d-flex justify-content-between">` +
         validar_repositorio(item.repositorio) +
@@ -88,21 +88,3 @@ function validar_repositorio(repositorio) {
 
 loadFile();
 loadFileAbilities();
-
-// Activado cuando hacemos scroll
-window.onscroll = function() {sticky_function()};
-
-// Obtenemos navbar
-var navbar = document.getElementById("navbar");
-
-//  Obtener la posición de desplazamiento de la barra de navegación
-var sticky = navbar.offsetTop;
-
-// Agregue la clase adhesiva a la barra de navegación cuando llegue a su posición de desplazamiento. Quitar "pegajoso" cuando salga de la posición de desplazamiento
-function sticky_function() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}

@@ -23,14 +23,14 @@ body, html {
 .hero-text {
     text-align: left;
     position: absolute;
-    top: 36px;
+    top: 10%;
     left: 16px;
     color: #FBF1EF;
 }
 
 .hero-avatar{
     position: absolute;
-    top: 32px;
+    top: 10%;
     right: 16px;
     height: 75%;
     border-radius: 50%;
@@ -41,7 +41,7 @@ body, html {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 6;
   }
 
   .sticky + .content {
@@ -85,7 +85,7 @@ a>i{
     transition-duration: 0.3s;
 }
 
-a>i:hover, article:hover{
+a>i:hover, article:hover, .go-top-button:hover i{
     color: #45F0DF;    
 }
 
@@ -93,6 +93,68 @@ img.portafolio{
     cursor:zoom-in;
 }
 
+/*Flecha*/
+.go-top-container{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: -1;
+}
+
+.go-top-button{
+    width: 0rem;
+    height: 0rem;
+    background: #111D4A;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button i{
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #FBF1EF;
+    transition: .2s;
+}
+
+.mostrar{
+    z-index: 2;
+}
+
+.mostrar .go-top-button{
+    animation: popup .3s ease-in-out;
+    width: 5rem;
+    height: 5rem;
+    z-index: 3;
+}
+
+.mostrar i{
+    transform: translate(-50%, -50% ) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 6.6rem;
+        height: 6.6rem;
+    }
+    100%{
+        width: 4rem;
+        height: 4rem;
+    }
+}
 
 /*Modals*/
 .modal{
@@ -135,6 +197,7 @@ div.modal-body, div.modal-footer{
 p.modal-realizado{
     font-size: 13px;
 }
+
 /*Habilidad*/
 .contenedor{    
   position: relative;
