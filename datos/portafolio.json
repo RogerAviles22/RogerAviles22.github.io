@@ -49,6 +49,29 @@
             "Editar o borrar el entretenimiento registrado."
          ]
     },{
+        "id":"a7",
+        "titulo":"Cerámica Doménica",
+        "imagen":"ceramica.png",
+        "repositorio":"https://ceramicas-domenica.netlify.app/",
+        "realizado":"Proyecto realizado para una amiga con el objetivo de aprender conceptos básicos de la librería ReactJs",
+        "lenguajes": [ "React", "HTML", "CSS" ],
+        "caracteristicas":[
+            "Animación en el Header utilizando librería Animate.",
+            "Cargar detalles de los productos en componentes Carta.",
+            "Página web subida en el hosting gratuito 'Netlify'"
+         ]
+    },{
+        "id":"a8",
+        "titulo":"Administración Restaurante",
+        "imagen":"restaurant.png",
+        "repositorio":"Repositorio privado",
+        "realizado":"Proyecto en proceso para la administración de un restaurant para un grupo de personas.",
+        "lenguajes": [ "Laravel", "HTML", "CSS", "MySql"],
+        "caracteristicas":[
+            "Mostrar gráficas estadísticas de las ventas y consumo usando la librería Highcharts.",
+            "Cargar datos en tablas usando la librería DataTables"
+         ]
+    },{
         "id":"a5",
         "titulo":"Ninja Element",
         "imagen":"ninja.png",

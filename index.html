@@ -17,18 +17,25 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
-    <title>Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Portafolio R. Avilés</title>
+    <meta
+      name="description"
+      content="Página dedicada para mostrar los proyectos personales y de trabajo realizados durante mi preparación como estudiante de Ing. en Computación"
+    />
+    <meta name="author" content="Roger Avilés"/>
+    <meta name="keywords" content="portafolio, proyectos, programación, interfaces, base de datos" />
 </head>
 
 <body>
     <div class="hero-image">
         <div class="">
-            <div class="hero-text">
+            <div class="hero-text animate__animated animate__fadeInLeft">
                 <h1 class="text-uppercase">Roger Avilés García</h1>
                 <p>Desarrollador de Software</p>
                 <p>Desarrollador FrontEnd</p>
             </div>
-            <img class="hero-avatar d-none d-md-block" src="images/yo.jpg" alt="">
+            <img class="hero-avatar d-none d-md-block animate__animated animate__zoomIn animate__delay-1s" src="images/yo.jpg" alt="">
         </div>
     </div>
     <nav id="navbar" class="navbar navbar-expand-sm">
@@ -55,15 +62,9 @@
         </div>
     </nav>
 
-    <div class="go-top-container">
-        <div class="go-top-button">
-            <i class="bi bi-arrow-up"></i>
-        </div>
-    </div>
-
 <div class="content">
-    <article class="mt-5 mx-2">
-        <h1 id="project" class="text-center">Proyecto</h1>
+    <article id="project" class="mt-5 mx-2">
+        <h1  class="text-center">Proyecto</h1>
         <hr>
         <div class="container-fluid">
             <div id="portafolio" class="row g-3">
@@ -71,8 +72,8 @@
             </div>
         </div>
     </article>
-    <article class="mt-5 mx-2">
-        <h1 id="ability" class="text-center">Habilidad</h1>
+    <article id="ability" class="mt-5 mx-2">
+        <h1  class="text-center">Habilidad</h1>
         <hr>
         <div class="container-fluid">
             <div id="habilidad" class="row g-2 align-items-center">
@@ -80,8 +81,8 @@
             </div>
         </div>
     </article>
-    <article class="mt-5 mx-2">
-        <h1 id="contact" class="text-center">Contacto</h1>
+    <article id="contact" class="mt-5 mx-2">
+        <h1  class="text-center">Contacto</h1>
         <hr>
         <div class="container-fluid">
             <div class="row">
@@ -94,7 +95,13 @@
 
     </article>
 </div>
+<div class="go-top-container">
+    <div class="go-top-button">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+</div>
     <footer class="p-2">
+        <p class="text-center"><cite>En la vida hay algo peor que el fracaso, el no haber intentado nada.</cite> (Franklin D. Roosevelt)</p>
         <p class="text-center">2021</p>
     </footer>
 </body>

@@ -81,7 +81,9 @@ function agregar_caracteristicas(caracteristicas){
 
 
 function validar_repositorio(repositorio) {
-    if (repositorio.includes("https"))
+    if (repositorio.includes("netlify"))
+        return `<a href="${repositorio}" target="_blank">Página Web</a>`
+    else if (repositorio.includes("https"))
         return `<a href="${repositorio}" target="_blank">Repositorio</a>`
     return `<p>${repositorio}</p>`
 }
